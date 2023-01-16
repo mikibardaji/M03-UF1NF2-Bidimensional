@@ -28,7 +28,7 @@ El menú per treballar serà el següent
 ** LA FILA ES EL ATACANTE Y LA COLUMNA ES EL QUE RECIBE EL ATAQUE **
 Codigo ayuda
 ```sh
-public static String[] tiposPokemon = {
+String[] tiposPokemon = {
                                             "ACERO", 
                                             "AGUA", 
                                             "BICHO",
@@ -60,7 +60,7 @@ public static String[] tiposPokemon = {
             - 0: el atacante hace un daño nulo al oponente (No afecta)
  
     */
-    public static double[][] efectividadesPokemon = {
+    double[][] efectividadesPokemon = {
          
         /*ACERO   AGUA   BICHO   DRAGON   ELÉC   FANT   FUEGO   HADA   HIELO   LUCHA   NORMAL   PLANTA   PSI   ROCA   SINIE  TIERRA   VENENO   VOLADOR   */
          
