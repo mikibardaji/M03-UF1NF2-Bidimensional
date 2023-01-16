@@ -25,7 +25,7 @@ El menú per treballar serà el següent
  4. Mostrar con que pokemons es mas efectivo un tipo pokemon y contar cuantos hay. ***(Pedir tipo pokemon)***
  5. Mostrar todas las combinaciones de ataques que tenga la efectividad buscada y contar cuantos hay ***(pedir efectividad a buscar)***
  
-** LA FILA ES EL ATACANTE Y LA COLUMNA ES EL QUE RECIBE EL ATAQUE **
+**LA FILA ES EL POKEMON ATACANTE Y LA COLUMNA ES EL QUE RECIBE EL ATAQUE**
 Codigo ayuda
 ```sh
 String[] tiposPokemon = {
