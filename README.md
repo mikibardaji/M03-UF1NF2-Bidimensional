@@ -20,19 +20,20 @@ Explicación tabla
 El menú per treballar serà el següent
 
  1. Mostrar impacto de atacante 1 al atacante 2 ***(Pedir 2 tipos de pokemon)***
- 2. Mostrar debilidades para un tipo pokemon (los que tienen doble) ***(Pedir tipo pokemon)***
+ 2. Mostrar debilidades para un tipo pokemon (los que cuando le atacan es doble) y contar cuantos hay.***(Pedir tipo pokemon)***
  3. Mostrar todos los daños para un tipo de pokemon. ***(Pedir tipo pokemon)***
  4. Mostrar con que pokemons es mas efectivo un tipo pokemon y contar cuantos hay. ***(Pedir tipo pokemon)***
  5. Mostrar todas las combinaciones de ataques que tenga la efectividad buscada y contar cuantos hay ***(pedir efectividad a buscar)***
  
+** LA FILA ES EL ATACANTE Y LA COLUMNA ES EL QUE RECIBE EL ATAQUE **
 Codigo ayuda
 ```sh
 public static String[] tiposPokemon = {
                                             "ACERO", 
                                             "AGUA", 
                                             "BICHO",
-                                            "DRAGÓN",
-                                            "ELÉCTRICO",
+                                            "DRAGON",
+                                            "ELECTRICO",
                                             "FANTASMA",
                                             "FUEGO",
                                             "HADA",
@@ -40,7 +41,7 @@ public static String[] tiposPokemon = {
                                             "LUCHA",
                                             "NORMAL",
                                             "PLANTA",
-                                            "PSÍQUICO",
+                                            "PSIQUICO",
                                             "ROCA",
                                             "SINIESTRO",
                                             "TIERRA",
