@@ -20,7 +20,7 @@ Explicación tabla
 El menú per treballar serà el següent
 
  1. Mostrar impacto de atacante 1 al atacante 2 ***(Pedir 2 tipos de pokemon)***
- 2. Mostrar debilidades para un tipo pokemon (los que cuando le atacan es doble) y contar cuantos hay.***(Pedir tipo pokemon)***
+ 2. Mostrar debilidades para un tipo pokemon (los que cuando le atacan(fila) el ataque es doble a la columna (tipo_elegido) y contar cuantos hay.***(Pedir tipo pokemon)***
  3. Mostrar todos los daños para un tipo de pokemon. ***(Pedir tipo pokemon)***
  4. Mostrar con que pokemons es mas efectivo un tipo pokemon y contar cuantos hay. ***(Pedir tipo pokemon)***
  5. Mostrar todas las combinaciones de ataques que tenga la efectividad buscada y contar cuantos hay ***(pedir efectividad a buscar)***
