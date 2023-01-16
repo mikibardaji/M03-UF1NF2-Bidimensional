@@ -7,9 +7,9 @@
 El youtuber Folagor03 contacta con nosotros para hacer un programa que nos muestre la tabla de tipos de Pokemon (tiene un problema serio con ello).
 En la solución os dejo un fichero java con los datos necesarios: la tabla de tipos y los tipos de Pokemon. Es el fichero llamado Constantes,java, copialo a tu Proyecto, si lo quieres hacer de cero.
 
-[![N|Solid](![tabla_tipos.jpg](https://user-images.githubusercontent.com/15630306/212656734-fa5be0d1-6a12-48c4-844a-5588cb53200c.jpg))]
+![](tabla_tipos.jpg)
 
-Explicación
+Explicación tabla
 
 - 0.5: el atacante hace la mitad de daño al oponente (No es muy eficaz)
 - 1: el atacante hace un daño neutro al oponente (No se da información) (en la imagen representa al -)
@@ -19,10 +19,11 @@ Explicación
 
 El menú per treballar serà el següent
 
- 1. Mostrar impacto de atacante 1 al atacante 2
- 2. Mostrar debilidades para un tipo pokemon (los que tienen doble)
- 3. Mostrar todos los daños para un tipo de pokemon.
- 4. Mostrar con que pokemons es mas efectivo un tipo pokemon.
+ 1. Mostrar impacto de atacante 1 al atacante 2 ***(Pedir 2 tipos de pokemon)***
+ 2. Mostrar debilidades para un tipo pokemon (los que tienen doble) ***(Pedir tipo pokemon)***
+ 3. Mostrar todos los daños para un tipo de pokemon. ***(Pedir tipo pokemon)***
+ 4. Mostrar con que pokemons es mas efectivo un tipo pokemon. ***(Pedir tipo pokemon)***
+ 5. Mostrar todas las combinaciones de ataques que tenga la efectividad buscada ***(pedir efectividad a buscar)***
  
 Codigo ayuda
 ```sh
