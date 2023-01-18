@@ -79,7 +79,7 @@ public class TablaPokemon {
         
         switch(opcion)
         {
-            case 1:
+            case 1: //mostrarAtaquepara  2 pokemons
                 ataquePokemon(tiposPokemon,efectividadesPokemon);
                 break;
             case 2: //debilidades
@@ -124,7 +124,7 @@ public class TablaPokemon {
 
     /**
      * Devuelve la posición del tipo que buscamos
-     * @param tiposPokemon Nombre de todos los pokemon existentes lista con todos los tipos de pokemon
+     * @param tiposPokemon Nombre de todos los pokemon existentes Nombre de todos los pokemon existentes lista con todos los tipos de pokemon
      * @param tipo el tipo de pokemon que buscamos
      * @return devuelve la fila del tipo pokemon, -1 si no lo encuentra
      */
@@ -162,7 +162,7 @@ public class TablaPokemon {
     /**
      * Pedira dos tipos de pokemon y mostrarà la fuerza de ataque del primer pokemon s
      * sobre el segundo
-     * @param tiposPokemon Nombre de todos los pokemon existentes
+     * @param tiposPokemon Nombre de todos los pokemon existentes Nombre de todos los pokemon existentes
      * @param efectividadesPokemon combinaciones ataques por tipo pokemon
      */
     private static void ataquePokemon(String[] tiposPokemon, double[][] efectividadesPokemon) {
@@ -170,7 +170,7 @@ public class TablaPokemon {
         String tipo = pedirFrase("Pedir tipo pokemon ataca");
         int fila_ataque = filaPokemon(tiposPokemon,tipo);
         String tipo2 = pedirFrase("Pedir tipo pokemon recibe ataque");
-        int fila_recibe = filaPokemon(tiposPokemon,tipo);    
+        int fila_recibe = filaPokemon(tiposPokemon,tipo2);    
         if (fila_ataque!=-1 && fila_recibe != -1)
         {
             System.out.println("Pokemon tipo " + tiposPokemon[fila_ataque] + " ataca a " 
@@ -186,40 +186,42 @@ public class TablaPokemon {
     /**
      * Pedira un tipo pokemon, y se mostrara todos los tipos que 
      * le atacan con fuerza dos
-     * @param tiposPokemon Nombre de todos los pokemon existentes
+     * @param tiposPokemon Nombre de todos los pokemon existentes Nombre de todos los pokemon existentes
      * @param efectividadesPokemon combinaciones ataques por tipo pokemon 
      */
     private static void mostrarDebilidades(String[] tiposPokemon, double[][] efectividadesPokemon) {
+        
         String tipo = pedirFrase("Pedir tipo pokemon que recibe el ataque");
         int columna_pokemon = filaPokemon(tiposPokemon,tipo);
         
         
         if(columna_pokemon!=-1)
         {
-        //fijo la columna y vario SOLO LAS FILAS SI ENCUENTRO
-        //UN DOS, MUESTRO EL POKEMON Y LO CUENTO;
-        int pokemon_debilitan=0;
-        for (int i = 0; i < efectividadesPokemon.length; i++) {
-            if (efectividadesPokemon[i][columna_pokemon]==2)
+            //fijo la fila y vario SOLO LAS FILAS SI ENCUENTRO
+            //UN DOS, MUESTRO EL POKEMON Y LO CUENTO;
+            int pokemon_debilitan=0;
+            for (int i = 0; i < efectividadesPokemon.length; i++) 
             {
-                pokemon_debilitan++;
-                System.out.println("Le debilitan los pokemon tipo... " + tiposPokemon[i]);
+                if (efectividadesPokemon[i][columna_pokemon]==2)
+                {
+                    pokemon_debilitan++;
+                    System.out.println("Le debilitan los pokemon tipo... " + tiposPokemon[i]);
+                }
             }
-        }
-        //al terminar recorrido puedo mostrar contador
-        System.out.println("Numero de pokemons debilitan " + pokemon_debilitan);
+            //al terminar recorrido puedo mostrar contador
+            System.out.println("Numero de pokemons debilitan " + pokemon_debilitan);
         }
         else
         {
             System.out.println("Tipo inexistente");
         }        
-        
+        pedirFrase("Aprieta return para continuar");
     }
 
     /**
      * Pedira un tipo pokemon, y se mostrara todos los tipos a los 
      * que  ataca con fuerza dos
-     * @param tiposPokemon Nombre de todos los pokemon existentes
+     * @param tiposPokemon Nombre de todos los pokemon existentes Nombre de todos los pokemon existentes
      * @param efectividadesPokemon combinaciones ataques por tipo pokemon 
      */
     private static void mostrarAtaquesEfectivos(String[] tiposPokemon, double[][] efectividadesPokemon) {
@@ -252,7 +254,7 @@ public class TablaPokemon {
     /** 
      * Pedira un valor de ataque y mostrara todas las combinaciones 
      * de todos los pokemon que den ese valor
-     * @param tiposPokemon Nombre de todos los pokemon existentes
+     * @param tiposPokemon Nombre de todos los pokemon existentes Nombre de todos los pokemon existentes
      * @param efectividadesPokemon combinaciones ataques por tipo pokemon 
      */
     private static void buscarAtaques(String[] tiposPokemon, double[][] efectividadesPokemon) {
@@ -281,26 +283,26 @@ public class TablaPokemon {
     /**
      * Pregutnara un tipo de pokemon
      * y mostrara todas las combinaciones con los otros tipos
-     * @param tiposPokemon Nombre de todos los pokemon existentes
+     * @param tiposPokemon Nombre de todos los pokemon existentes Nombre de todos los pokemon existentes
      * @param efectividadesPokemon combinaciones ataques por tipo pokemon 
      */
     private static void mostrarDanyos(String[] tiposPokemon, double[][] efectividadesPokemon) {
         String tipo = pedirFrase("Dime un tipo Pokemon ");
         
-        int fila_pokemon = filaPokemon(tiposPokemon,tipo);
-        if (fila_pokemon!=-1)
+        int columna_pokemon = filaPokemon(tiposPokemon,tipo);
+        if (columna_pokemon!=-1)
         {
             pedirFrase("Estas son las combinaciones de ataue con los otros pokemon (aprieta enter)");
         
-            for (int columna = 0; columna < efectividadesPokemon[fila_pokemon].length; columna++)
+            for (int fila = 0; fila < efectividadesPokemon[columna_pokemon].length; fila++)
             {
                 System.out.println("Puedes atacar al tipo "
-                +  tiposPokemon[columna] + " con:" 
-                + efectividadesPokemon[fila_pokemon][columna]);
+                +  tiposPokemon[fila] + " con:" 
+                + efectividadesPokemon[fila][columna_pokemon]);
 
             }
 
-            System.out.println("Numero de combinaciones motradas ... " + efectividadesPokemon[fila_pokemon].length);
+            System.out.println("Numero de combinaciones motradas ... " + efectividadesPokemon[columna_pokemon].length);
             pedirFrase("(aprieta enter para continuar)");
         }
         else
